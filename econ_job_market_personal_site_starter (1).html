@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tonghui Tian — Economics PhD Candidate</title>
+  <meta name="description" content="Economics PhD candidate website for research, teaching, CV, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#ffffff; --text:#222; --muted:#5f6b7a; --link:#1a73e8; --border:#e5e7eb; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", Times, serif; letter-spacing: .2px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+    /* Top bar like the reference site */
+    header { position: sticky; top:0; background:#fff; border-bottom:1px solid var(--border); z-index: 10; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding: 12px 0; }
+    .brand { font-weight:800; font-size:18px; }
+    .nav { display:flex; gap:18px; align-items:center; }
+    .nav a { font-weight:600; }
+
+    /* Two-column bio layout */
+    .grid { display:grid; grid-template-columns: 320px 1fr; gap: 36px; align-items:start; margin-top: 30px; }
+    .left { text-align:center; }
+    .avatar { width: 240px; height: 240px; border-radius: 50%; object-fit: cover; display:block; margin: 0 auto 14px; border: 1px solid var(--border); }
+    .name { font-size: 28px; font-weight: 800; margin: 6px 0 4px; }
+    .subtitle { color: var(--muted); font-size: 16px; }
+    .affil { margin-top: 6px; }
+    .icons { margin-top: 12px; display:flex; gap:12px; justify-content:center; }
+    .icon { width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; border-radius:6px; border:1px solid var(--border); }
+
+    .content h1 { font-size: 44px; margin: 0 0 12px; }
+    .content p { line-height: 1.8; color: #333; }
+
+    .cols { display:grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 22px; }
+    .card h3 { font-size: 22px; margin-bottom: 8px; }
+    .list { margin: 0; padding-left: 18px; }
+    .list li { margin: 8px 0; }
+
+    /* Pages underneath mimic same header, reuse container */
+    .page { display:none; }
+    .page.active { display:block; }
+
+    footer { margin: 40px 0; color: var(--muted); font-size: 14px; text-align: center; }
+
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; }
+      .left { text-align:left; }
+      .icons { justify-content:flex-start; }
+      .content h1 { font-size: 34px; }
+      .cols { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand">Tonghui Tian</div>
+      <nav class="nav" aria-label="Main">
+        <a href="#home" data-link>Home</a>
+        <a href="#research" data-link>Research</a>
+        <a href="#teaching" data-link>Teaching</a>
+        <a href="#cv" data-link>CV</a>
+        <a href="#contact" data-link>Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Home -->
+    <section id="home" class="page active" aria-labelledby="bio-title">
+      <div class="grid">
+        <aside class="left">
+          <img class="avatar" src="https://picsum.photos/600/600" alt="Portrait of Tonghui Tian" />
+          <div class="name">Tonghui Tian</div>
+          <div class="subtitle">Economics PhD Candidate</div>
+          <div class="affil"><a href="https://carleton.ca/economics/" target="_blank" rel="noopener">Department of Economics, Carleton University</a></div>
+          <div class="icons" aria-label="Social links">
+            <a class="icon" href="mailto:tonghui@example.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+            </a>
+            <a class="icon" href="#" aria-label="Google Scholar">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 4 3 9l9 5 9-5-9-5Zm0 7.8L6 9l6-3.3L18 9l-6 2.8Zm-6 4.2 6 3 6-3v2l-6 3-6-3v-2Z"/></svg>
+            </a>
+            <a class="icon" href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.69c-2.78.61-3.37-1.34-3.37-1.34-.45-1.14-1.1-1.44-1.1-1.44-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.89 1.52 2.34 1.08 2.9.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 7.07c.85 0 1.71.11 2.51.33 1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.39.11 2.65.64.7 1.02 1.6 1.02 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            </a>
+            <a class="icon" href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.06c.53-1 1.84-2.06 3.78-2.06 4.05 0 4.8 2.66 4.8 6.1V21h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21h-4V9Z"/></svg>
+            </a>
+          </div>
+        </aside>
+
+        <section class="content">
+          <h1 id="bio-title">Biography</h1>
+          <p>I am <strong>Tonghui Tian</strong>, a PhD candidate in Economics at Carleton University. My field is applied microeconomics. My interests include health, housing and real estate, and public policy. I am on the 2025 to 2026 economics job market.</p>
+
+          <div class="cols">
+            <div class="card">
+              <h3>Interests</h3>
+              <ul class="list">
+                <li>Applied microeconomics</li>
+                <li>Health economics</li>
+                <li>Housing, real estate, urban policy</li>
+                <li>Public economics</li>
+                <li>Causal inference including regression discontinuity and difference in differences</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Education</h3>
+              <ul class="list">
+                <li>PhD in Economics, Carleton University, expected 2026</li>
+                <li>Master of Science in Nutrition</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Research page: Working Papers only -->
+    <section id="research" class="page" aria-labelledby="research-title">
+      <h2 id="research-title">Research</h2>
+      <div class="card">
+        <h3>Working Papers</h3>
+        <ul class="list">
+          <li>Do Red States Build More? Gubernatorial Partisanship and Housing Outcomes (with Louis Philippe Beland). Under review at Regional Science and Urban Economics. <a href="#">PDF</a></li>
+          <li>Comparison of Human, AI Assisted, and Quasi Automated Approaches to Assessing Research Reproducibility in Quantitative Social Science (with Abel Brodeur et al.). Under review at PNAS. <a href="#">PDF</a></li>
+          <li>The Impact of Gender Based Pricing Policies on Coverage in Long Term Care Insurance Markets in the United States. Working paper. <a href="#">PDF</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching" class="page" aria-labelledby="teaching-title">
+      <h2 id="teaching-title">Teaching</h2>
+      <div class="card">
+        <ul class="list">
+          <li>ECON 1001 Introduction to Microeconomics, 2021 Summer, 2024 Fall</li>
+          <li>ECON 1002 Introduction to Macroeconomics, 2021 Winter, 2021 Fall, 2022 Fall, 2025 Winter</li>
+          <li>ECON 2009 Managerial Economics, 2024 Fall</li>
+          <li>ECON 2220 Introductory Econometrics, 2025 Summer</li>
+          <li>ECON 2708 Applied Data Analysis, 2022 Fall, 2024 Winter</li>
+          <li>ECON 3602 International Monetary Problems, 2021 Winter</li>
+          <li>ECON 4020 Advanced Microeconomic Theory, 2022 Fall, 2023 Fall, 2025 Winter</li>
+          <li>ECON 4052 Corporate Financial Economics, 2022 Winter</li>
+          <li>ECON 5020 Microeconomic Theory Graduate, 2022 Fall, 2023 Fall</li>
+          <li>ECON 5021 Macroeconomic Theory Graduate, 2024 Winter</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="page" aria-labelledby="cv-title">
+      <h2 id="cv-title">CV</h2>
+      <div class="card">
+        <p>Academic CV: <a href="cv/Tonghui_Tian_CV.pdf">PDF</a></p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="page" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:tonghui@example.com">tonghui@example.com</a></p>
+        <p>Office: Loeb Building B844, Department of Economics, Carleton University, 1125 Colonel By Drive, Ottawa, ON K1S 5B6, Canada</p>
+        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="y"></span> Tonghui Tian</p>
+    </footer>
+  </main>
+
+  <script>
+    // Simple hash router
+    const pages = document.querySelectorAll('.page');
+    function showPage(id){
+      pages.forEach(p => p.classList.remove('active'));
+      const el = document.querySelector(id) || document.querySelector('#home');
+      el.classList.add('active');
+      window.scrollTo({top:0, behavior:'instant'});
+    }
+    window.addEventListener('hashchange', () => showPage(location.hash));
+    document.querySelectorAll('[data-link]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if(href.startsWith('#')) { e.preventDefault(); location.hash = href; }
+      })
+    });
+    document.getElementById('y').textContent = new Date().getFullYear();
+    showPage(location.hash || '#home');
+  </script>
+</body>
+</html>
